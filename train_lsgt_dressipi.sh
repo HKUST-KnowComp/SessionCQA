@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=2 python ./deduction_model/train.py \
+-dn hyper_graph_dressipi \
+-m lsgt \
+--train_query_dir ./sampled_hyper_train_dressipi_merged_graph_dgl \
+--valid_query_dir ./sampled_hyper_valid_dressipi_graph_dgl \
+--test_query_dir ./sampled_hyper_test_dressipi_graph_dgl \
+--checkpoint_path ./logs \
+--num_layers 2 \
+-fol  \
+-b 1024 \
+--log_steps 24000 \
+-lr 0.001
