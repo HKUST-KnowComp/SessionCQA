@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 python ./deduction_model/train.py \
+-dn hyper_graph_data_en \
+-m lsgt \
+--train_query_dir ./sampled_hyper_train_merged_graph_dgl \
+--valid_query_dir ./sampled_hyper_valid_graph_dgl \
+--test_query_dir ./sampled_hyper_test_graph_dgl \
+--checkpoint_path ./logs \
+--num_layers 2 \
+-fol  \
+-b 512 \
+--log_steps 120000 \
+-lr 0.0005
