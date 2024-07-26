@@ -1,11 +1,11 @@
-# literate-waffle
-The repository holding the code for mining logical queries/create user intention KG from session data. 
+# SessionCQA
+The repository holds the code for mining logical queries/creating user intention KG from session data. 
 
 
 ## Data
 
-Just download the data by clicking this [**link**](https://hkustconnect-my.sharepoint.com/:f:/g/personal/jbai_connect_ust_hk/EmdRTPX0S_9EgbXsPJ_hgmYBZIPaJhxz59XKOfs1PQTJ-A?e=AMEcaj), and extract them in root of this repository. Three datasets are all included. For LSGT and some of baselines, there are some further pre-processing, so be awared of using the correct corresponding files or there would dataloading errors. 
-It too abstract to describe how to run the code because there are so many combinations of logical encoder, session encoder, and datasets. We make it more clear by the following examples scripts and you can substitude the flags.
+Just download the data by clicking this [**link**](https://hkustconnect-my.sharepoint.com/:f:/g/personal/jbai_connect_ust_hk/EmdRTPX0S_9EgbXsPJ_hgmYBZIPaJhxz59XKOfs1PQTJ-A?e=AMEcaj), and extract them in root of this repository. Three datasets are all included. There is more pre-processing for LSGT and some of the baselines, so please remember that using the correct corresponding files otherwise will cause data-loading errors. 
+It is too abstract to describe how to run the code because there are many combinations of logical encoder, session encoder, and datasets. We make it clearer by the following example scripts, and you can substitute the flags.
 
 
 ## Baselines of Logical Encoder + Session Encoder
@@ -28,13 +28,13 @@ python ./deduction_model/train.py \
 --session_encoder AttnMixer
 ```
 
-The ```-m fuzzqe``` denotes the logical encoder which we use here. The ```--session_encoder``` denots the session encoder here. In this  implmentation, we implemented the combinations of these two flags, and these flags have the following options.
+The ```-m fuzzqe``` denotes the logical encoder which we use here. The ```--session_encoder''' denotes the session encoder here. In this  implementation, we implemented the combinations of these two flags, which have the following options.
 
 
 ### Baseline Logical Encoders
 
-The baseline logical encoders implementations are adopted from the SQE repo, which is a general code base. 
-Here are the code for the 
+The baseline logical encoder implementations are adopted from the SQE repo, a general code base. 
+Here is the code for the 
 
 | Model Flag (-m) | Paper  |
 |---|---|
@@ -103,7 +103,7 @@ We also include the shell scripts that we run to reproduce the number shown in t
 
 ## Others
 
-If there is anything unclear, please contact Jiaxin Bai via jbai@connect.ust.hk.
+If anything is unclear, please get in touch with Jiaxin Bai via jbai@connect.ust.hk.
 If you find this useful, please cite:
 
 ```
